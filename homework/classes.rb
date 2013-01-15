@@ -21,6 +21,11 @@ class Player
     self.points = 0
   end
 
+  def move num_of_move
+    self.points = points + SCORING_RULES.fetch(num_of_move)
+  end
+
+
 end
 
 class TestPlayer < Test::Unit::TestCase
